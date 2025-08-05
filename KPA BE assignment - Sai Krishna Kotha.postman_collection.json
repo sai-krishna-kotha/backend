@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "414193e9-fdc6-4de8-a2fe-e1323c62e11b",
+		"name": "KPA BE assignment - Sai Krishna Kotha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42904523"
+	},
+	"item": [
+		{
+			"name": "POST Wheel Spec form",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"formNumber\": \"WHEEL-TEST-001\",\n  \"submittedBy\": \"postman_user\",\n  \"submittedDate\": \"2025-08-05\",\n  \"fields\": {\n    \"treadDiameterNew\": \"915\",\n    \"lastShopIssueSize\": \"837\",\n    \"condemningDia\": \"825\",\n    \"wheelGauge\": \"1600\",\n    \"variationSameAxle\": \"0.5\",\n    \"variationSameBogie\": \"5\",\n    \"variationSameCoach\": \"13\",\n    \"wheelProfile\": \"29.4 Flange Thickness\",\n    \"intermediateWWP\": \"20 TO 28\",\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n    \"wheelDiscWidth\": \"127 (+4/-0)\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forms",
+								"wheel-specifications"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 05 Aug 2025 14:43:37 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "186"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Wheel specification submitted successfully.\",\n    \"data\": {\n        \"formNumber\": \"WHEEL-TEST-001\",\n        \"submittedBy\": \"postman_user\",\n        \"submittedDate\": \"2025-08-05\",\n        \"status\": \"Saved\"\n    }\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"formNumber\": \"WHEEL-TEST-002\",\n  \"submittedBy\": \"postman_user\",\n  \"submittedDate\": \"2025-08-05\",\n  \"fields\": {\n    \"treadDiameterNew\": \"915\",\n    \"lastShopIssueSize\": \"837\",\n    \"condemningDia\": \"825\",\n    \"wheelGauge\": \"1600\",\n    \"variationSameAxle\": \"0.5\",\n    \"variationSameBogie\": \"5\",\n    \"variationSameCoach\": \"13\",\n    \"wheelProfile\": \"29.4 Flange Thickness\",\n    \"intermediateWWP\": \"20 TO 28\",\n    \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n    \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\n    \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n    \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n    \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n    \"wheelDiscWidth\": \"127 (+4/-0)\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forms",
+								"wheel-specifications"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 05 Aug 2025 14:44:30 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "186"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Wheel specification submitted successfully.\",\n    \"data\": {\n        \"formNumber\": \"WHEEL-TEST-002\",\n        \"submittedBy\": \"postman_user\",\n        \"submittedDate\": \"2025-08-05\",\n        \"status\": \"Saved\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Wheel Spec Form by multiple params",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications?formNumber=WHEEL-TEST-001&submittedBy&SubmittedDate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forms",
+								"wheel-specifications"
+							],
+							"query": [
+								{
+									"key": "formNumber",
+									"value": "WHEEL-TEST-001"
+								},
+								{
+									"key": "submittedBy",
+									"value": null
+								},
+								{
+									"key": "SubmittedDate",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 05 Aug 2025 14:44:07 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "681"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Filtered wheel specification forms fetched successfully.\",\n    \"data\": [\n        {\n            \"form_number\": \"WHEEL-TEST-001\",\n            \"submitted_by\": \"postman_user\",\n            \"submitted_date\": \"2025-08-05\",\n            \"fields\": {\n                \"treadDiameterNew\": \"915\",\n                \"lastShopIssueSize\": \"837\",\n                \"condemningDia\": \"825\",\n                \"wheelGauge\": \"1600\",\n                \"variationSameAxle\": \"0.5\",\n                \"variationSameBogie\": \"5\",\n                \"variationSameCoach\": \"13\",\n                \"wheelProfile\": \"29.4 Flange Thickness\",\n                \"intermediateWWP\": \"20 TO 28\",\n                \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n                \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\n                \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n                \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n                \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n                \"wheelDiscWidth\": \"127 (+4/-0)\"\n            }\n        }\n    ]\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/forms/wheel-specifications?formNumber=WHEEL-TEST-002&submittedBy=postman_user&SubmittedDate",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"forms",
+								"wheel-specifications"
+							],
+							"query": [
+								{
+									"key": "formNumber",
+									"value": "WHEEL-TEST-002"
+								},
+								{
+									"key": "submittedBy",
+									"value": "postman_user"
+								},
+								{
+									"key": "SubmittedDate",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "date",
+							"value": "Tue, 05 Aug 2025 14:45:14 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "681"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"Filtered wheel specification forms fetched successfully.\",\n    \"data\": [\n        {\n            \"form_number\": \"WHEEL-TEST-002\",\n            \"submitted_by\": \"postman_user\",\n            \"submitted_date\": \"2025-08-05\",\n            \"fields\": {\n                \"treadDiameterNew\": \"915\",\n                \"lastShopIssueSize\": \"837\",\n                \"condemningDia\": \"825\",\n                \"wheelGauge\": \"1600\",\n                \"variationSameAxle\": \"0.5\",\n                \"variationSameBogie\": \"5\",\n                \"variationSameCoach\": \"13\",\n                \"wheelProfile\": \"29.4 Flange Thickness\",\n                \"intermediateWWP\": \"20 TO 28\",\n                \"bearingSeatDiameter\": \"130.043 TO 130.068\",\n                \"rollerBearingOuterDia\": \"280 (+0.0/-0.035)\",\n                \"rollerBearingBoreDia\": \"130 (+0.0/-0.025)\",\n                \"rollerBearingWidth\": \"93 (+0/-0.250)\",\n                \"axleBoxHousingBoreDia\": \"280 (+0.030/+0.052)\",\n                \"wheelDiscWidth\": \"127 (+4/-0)\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

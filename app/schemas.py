@@ -1,39 +1,35 @@
-from pydantic import BaseModel
-from datetime import date
-from typing import Dict, Any, List, Optional
+# In app/schemas.py
 
+from pydantic import BaseModel, ConfigDict, alias_generators
+from datetime import date
+from typing import Dict, Any, List
+
+# Pydantic model for the nested 'fields' object.
 class WheelSpecFields(BaseModel):
     treadDiameterNew: str
     lastShopIssueSize: str
     condemningDia: str
     wheelGauge: str
-    variationSameAxle: float
-    variationSameBogie: int
-    variationSameCoach: int
+    variationSameAxle: str
+    variationSameBogie: str
+    variationSameCoach: str
     wheelProfile: str
     intermediateWWP: str
     bearingSeatDiameter: str
-    rollerBearingBoreDia: str
     rollerBearingOuterDia: str
+    rollerBearingBoreDia: str
     rollerBearingWidth: str
     axleBoxHousingBoreDia: str
     wheelDiscWidth: str
 
+# Pydantic model for the incoming POST request body.
 class WheelSpecificationCreate(BaseModel):
     formNumber: str
     submittedBy: str
     submittedDate: date
     fields: WheelSpecFields
 
-class WheelSpecificationInDB(BaseModel):
-    id: int
-    formNumber: str
-    submittedBy: str
-    submittedDate: date
-    fields: Dict[str, Any]
-
-    class Config:
-        from_attributes = True 
+# Schemas for specific API responses 
 
 class PostSuccessData(BaseModel):
     formNumber: str
@@ -47,26 +43,20 @@ class PostSuccessResponse(BaseModel):
     data: PostSuccessData
 
 class GetResponseData(BaseModel):
+    # These fields are camelCase for the JSON API response
     formNumber: str
     submittedBy: str
     submittedDate: date
     fields: Dict[str, Any]
 
+    # This configuration tells Pydantic how to read from our database model.
+    model_config = ConfigDict(
+        from_attributes=True,  # Allow creating from an object with attributes (like our DB model)
+        alias_generator=alias_generators.to_snake, # When looking for 'formNumber', create an alias 'form_number'
+        populate_by_name=True, # Allow populating the model by its alias
+    )
+
 class GetSuccessResponse(BaseModel):
     success: bool = True
     message: str
     data: List[GetResponseData]
-
-
-# class DummyLoginRequest(BaseModel):
-#     phoneNumber: str
-#     password: str
-
-# class DummyLoginResponseData(BaseModel):
-#     user_id: str = "dummy_user_123"
-#     token: str = "dummy_jwt_token_for_testing"
-#     message: str = "Login successful"
-
-# class DummyLoginSuccessResponse(BaseModel):
-#     success: bool = True
-#     data: DummyLoginResponseData
