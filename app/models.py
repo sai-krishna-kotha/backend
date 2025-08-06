@@ -1,8 +1,6 @@
 from sqlalchemy import Column, Integer, String, Date, JSON
 from .database import Base
 
-# This class defines what our `wheel_specifications` table
-# looks like in the database using SQLAlchemy.
 class WheelSpecification(Base):
     __tablename__ = "wheel_specifications"
 

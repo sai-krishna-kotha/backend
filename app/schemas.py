@@ -1,5 +1,3 @@
-# In app/schemas.py
-
 from pydantic import BaseModel, ConfigDict, alias_generators
 from datetime import date
 from typing import Dict, Any, List
@@ -29,8 +27,8 @@ class WheelSpecificationCreate(BaseModel):
     submittedDate: date
     fields: WheelSpecFields
 
-# Schemas for specific API responses 
 
+# Schemas for specific API responses 
 class PostSuccessData(BaseModel):
     formNumber: str
     submittedBy: str
@@ -43,17 +41,15 @@ class PostSuccessResponse(BaseModel):
     data: PostSuccessData
 
 class GetResponseData(BaseModel):
-    # These fields are camelCase for the JSON API response
     formNumber: str
     submittedBy: str
     submittedDate: date
     fields: Dict[str, Any]
 
-    # This configuration tells Pydantic how to read from our database model.
     model_config = ConfigDict(
-        from_attributes=True,  # Allow creating from an object with attributes (like our DB model)
-        alias_generator=alias_generators.to_snake, # When looking for 'formNumber', create an alias 'form_number'
-        populate_by_name=True, # Allow populating the model by its alias
+        from_attributes=True, 
+        alias_generator=alias_generators.to_snake,
+        populate_by_name=True,
     )
 
 class GetSuccessResponse(BaseModel):

@@ -10,8 +10,6 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
-# This function gives us a database session for each API request
-# and makes sure it's closed afterward.
 def get_db():
     db = SessionLocal()
     try:
